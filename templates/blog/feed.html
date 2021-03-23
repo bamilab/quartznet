@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}Feed{% endblock %}
+
+{% block head %}
+<script type="text/javascript">
+	const ADDRESS = "{{address}}"
+</script>
+{% endblock %}
+
+{% block content %}
+	<div class="feed-head">
+		{% block feed_head %}{% endblock %}
+	</div>
+
+	<div class="feed-posts">
+		<div class="status" id="feed-status"></div>
+		{% for post in feed %}
+			<div class="post" id="post-{{post.id}}">
+				{% raw %}
+					{{post.html}}
+				{% endraw %}
+			</div>
+		{% else %}
+			No posts available (yet).
+		{% endfor %}
+	</div>
+{% endblock %}

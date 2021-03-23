@@ -1,0 +1,1 @@
+pub const RELAY_POWER: u8 = 1;

@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="following">
+	<h3>Following</h3>
+	<ul>
+		
+	</ul>
+</div>
+
+<div class="blogs">
+	<h3>Your Blogs</h3>
+	<ul>
+		{% for blog in own_blogs %}
+			<li><a href="/blog/feed/ego/{{blog.name}}">{{blog.name}}</a></li>
+		{% endfor %}
+		<li><a href="/blog/new">Create new blog</a></li>
+	</ul>
+</div>
+
+{% endblock %}

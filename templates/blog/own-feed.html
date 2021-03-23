@@ -1,0 +1,9 @@
+{% extends 'blog/feed.html' %}
+
+{% block feed_head %}
+	<form method="post">
+		<div><textarea name="message" placeholder="Share a message..."></textarea></div>
+		<div><input type="text" name="tags" placeholder="Optional tags..." /></div>
+		<div><button type="submit">Share</button></div>
+	</form>
+{% endblock %}
